@@ -1,0 +1,9 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+COPY backend/llm_chat_backend.py .
+
+RUN pip install fastapi uvicorn python-socketio requests
+
+CMD ["uvicorn", "llm_chat_backend:app", "--host", "0.0.0.0", "--port", "8000"]

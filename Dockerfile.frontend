@@ -1,0 +1,10 @@
+# Dockerfile.frontend
+FROM python:3.10-slim
+
+WORKDIR /app
+
+COPY frontend/llm_chat_frontend.py .
+
+RUN pip install streamlit "python-socketio[client]"
+
+CMD ["streamlit", "run", "llm_chat_frontend.py", "--server.port=8501", "--server.address=0.0.0.0"]
