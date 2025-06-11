@@ -1,28 +1,33 @@
 # realtime-llm-chat-app
-# 🧠 Real-time Chat with Local LLM (Generative AI Internship Assignment)
+# 🧠 Real-Time LLM Chat App
 
-This is a real-time, multi-user chat system using a local LLM (via Ollama), built with FastAPI, Socket.IO, and Streamlit. Fully containerized using Docker Compose.
+This project is a real-time, multi-user chat application using a local LLM via Ollama, built with:
+
+- 🔄 FastAPI + Socket.IO (backend)
+- 🧾 Streamlit (frontend)
+- 🐋 Docker Compose (for containerization)
+- 🧠 Ollama (for running LLMs like Mistral locally)
+
+---
 
 ## 🚀 Features
 
-- 🔄 Real-time communication via Socket.IO
-- 🧑‍🤝‍🧑 Supports multiple users
-- 🧠 Powered by Mistral / LLaMA 3 running on Ollama
-- 🧊 Easy deployment using Docker Compose
-- 🖥️ Clean UI using Streamlit
+- Real-time chat over Socket.IO
+- Async communication between backend & frontend
+- Multi-user support
+- LLM-powered replies using `mistral` model via Ollama
+- Containerized deployment with Docker
 
 ---
 
-## 🧱 Architecture
+## 🛠️ Setup Instructions
 
-- **Backend**: FastAPI + Socket.IO
-- **Frontend**: Streamlit + Socket.IO client
-- **LLM**: Local model running on Ollama (e.g., Mistral)
-- **Communication**: Asynchronous, event-based
-
----
-
-## ⚙️ Setup Instructions
+### 📦 Prerequisites
+- [Docker](https://docs.docker.com/get-docker/)
+- [Ollama](https://ollama.com/) installed locally
+- Model `mistral` installed locally:
+  ```bash
+ ollama run mistral
 
 ### 1. Install [Ollama](https://ollama.com) and pull a model:
 ```bash
